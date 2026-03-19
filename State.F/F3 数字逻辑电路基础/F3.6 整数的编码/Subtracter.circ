@@ -14,7 +14,11 @@
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
   <lib desc="#Memory" name="4"/>
-  <lib desc="#I/O" name="5"/>
+  <lib desc="#I/O" name="5">
+    <tool name="DipSwitch">
+      <a name="number" val="1"/>
+    </tool>
+  </lib>
   <lib desc="#TTL" name="6"/>
   <lib desc="#TCL" name="7"/>
   <lib desc="#Base" name="8"/>
@@ -64,11 +68,33 @@
       <a name="label" val="A"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(160,210)" name="Pin">
+    <comp lib="0" loc="(160,230)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B"/>
       <a name="width" val="4"/>
     </comp>
+    <comp lib="5" loc="(180,140)" name="Hex Digit Display"/>
+    <comp lib="5" loc="(180,220)" name="Hex Digit Display"/>
+    <comp lib="5" loc="(260,120)" name="DipSwitch">
+      <a name="facing" val="south"/>
+      <a name="label" val="borrow"/>
+      <a name="number" val="1"/>
+    </comp>
+    <comp lib="5" loc="(490,150)" name="LED"/>
+    <comp lib="5" loc="(510,120)" name="Hex Digit Display"/>
+    <comp loc="(490,130)" name="Subtracter_4bit"/>
+    <wire from="(160,150)" to="(180,150)"/>
+    <wire from="(160,230)" to="(180,230)"/>
+    <wire from="(180,140)" to="(180,150)"/>
+    <wire from="(180,150)" to="(270,150)"/>
+    <wire from="(180,220)" to="(180,230)"/>
+    <wire from="(180,230)" to="(260,230)"/>
+    <wire from="(250,120)" to="(250,130)"/>
+    <wire from="(250,130)" to="(270,130)"/>
+    <wire from="(260,170)" to="(260,230)"/>
+    <wire from="(260,170)" to="(270,170)"/>
+    <wire from="(490,130)" to="(510,130)"/>
+    <wire from="(510,120)" to="(510,130)"/>
   </circuit>
   <circuit name="Full_Subtracter">
     <a name="appearance" val="logisim_evolution"/>
