@@ -73,10 +73,24 @@
     </comp>
     <comp lib="5" loc="(290,170)" name="Hex Digit Display"/>
     <comp lib="5" loc="(290,250)" name="Hex Digit Display"/>
+    <comp lib="5" loc="(580,170)" name="LED">
+      <a name="label" val="Carry"/>
+    </comp>
+    <comp lib="5" loc="(600,250)" name="Hex Digit Display"/>
+    <comp loc="(570,180)" name="adder_4bit"/>
     <wire from="(260,180)" to="(290,180)"/>
     <wire from="(260,260)" to="(290,260)"/>
     <wire from="(290,170)" to="(290,180)"/>
+    <wire from="(290,180)" to="(350,180)"/>
     <wire from="(290,250)" to="(290,260)"/>
+    <wire from="(290,260)" to="(330,260)"/>
+    <wire from="(330,200)" to="(330,260)"/>
+    <wire from="(330,200)" to="(350,200)"/>
+    <wire from="(570,170)" to="(570,180)"/>
+    <wire from="(570,170)" to="(580,170)"/>
+    <wire from="(570,200)" to="(580,200)"/>
+    <wire from="(580,200)" to="(580,250)"/>
+    <wire from="(580,250)" to="(600,250)"/>
   </circuit>
   <circuit name="half_adder">
     <a name="appearance" val="logisim_evolution"/>
