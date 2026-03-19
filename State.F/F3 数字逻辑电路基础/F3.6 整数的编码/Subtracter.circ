@@ -72,10 +72,6 @@
     <a name="circuit" val="Full_Subtracter"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(180,150)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="borrow_in"/>
-    </comp>
     <comp lib="0" loc="(180,190)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="bit_1"/>
@@ -84,18 +80,37 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="bit_0"/>
     </comp>
-    <comp lib="0" loc="(420,190)" name="Pin">
+    <comp lib="0" loc="(180,290)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="borrow_in"/>
+    </comp>
+    <comp lib="0" loc="(770,240)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="borrow_out"/>
       <a name="type" val="output"/>
     </comp>
-    <comp lib="0" loc="(420,230)" name="Pin">
+    <comp lib="0" loc="(770,290)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="diff"/>
       <a name="type" val="output"/>
     </comp>
+    <comp lib="1" loc="(760,240)" name="OR Gate"/>
+    <comp loc="(410,210)" name="Half_Subtracter"/>
+    <comp loc="(680,270)" name="Half_Subtracter"/>
+    <wire from="(180,190)" to="(190,190)"/>
+    <wire from="(180,230)" to="(190,230)"/>
+    <wire from="(180,290)" to="(460,290)"/>
+    <wire from="(190,190)" to="(190,210)"/>
+    <wire from="(410,210)" to="(710,210)"/>
+    <wire from="(410,230)" to="(460,230)"/>
+    <wire from="(460,230)" to="(460,270)"/>
+    <wire from="(680,270)" to="(710,270)"/>
+    <wire from="(680,290)" to="(770,290)"/>
+    <wire from="(710,210)" to="(710,220)"/>
+    <wire from="(710,260)" to="(710,270)"/>
+    <wire from="(760,240)" to="(770,240)"/>
   </circuit>
   <circuit name="Half_Subtracter">
     <a name="appearance" val="logisim_evolution"/>
