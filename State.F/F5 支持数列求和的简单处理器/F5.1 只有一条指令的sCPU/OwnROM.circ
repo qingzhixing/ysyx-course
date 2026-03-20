@@ -73,62 +73,6 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(200,440)" name="Tunnel">
-      <a name="label" val="reset"/>
-    </comp>
-    <comp lib="0" loc="(340,130)" name="Probe">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(390,160)" name="Tunnel">
-      <a name="label" val="PC"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(520,140)" name="Power"/>
-    <comp lib="0" loc="(540,160)" name="Clock">
-      <a name="appearance" val="NewPins"/>
-    </comp>
-    <comp lib="0" loc="(560,90)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="PC"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(70,130)" name="Clock">
-      <a name="appearance" val="NewPins"/>
-    </comp>
-    <comp lib="0" loc="(70,70)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="reset"/>
-    </comp>
-    <comp lib="0" loc="(890,140)" name="Probe">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(950,170)" name="Tunnel">
-      <a name="label" val="CMD"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="4" loc="(590,80)" name="RAM">
-      <a name="appearance" val="logisim_evolution"/>
-    </comp>
-    <comp lib="4" loc="(80,50)" name="Counter">
-      <a name="appearance" val="logisim_evolution"/>
-    </comp>
-    <comp lib="5" loc="(180,440)" name="Button"/>
-    <wire from="(180,440)" to="(200,440)"/>
-    <wire from="(270,160)" to="(340,160)"/>
-    <wire from="(340,130)" to="(340,160)"/>
-    <wire from="(340,160)" to="(390,160)"/>
-    <wire from="(520,140)" to="(590,140)"/>
-    <wire from="(540,160)" to="(550,160)"/>
-    <wire from="(550,150)" to="(550,160)"/>
-    <wire from="(550,150)" to="(590,150)"/>
-    <wire from="(560,90)" to="(590,90)"/>
-    <wire from="(70,130)" to="(80,130)"/>
-    <wire from="(70,70)" to="(80,70)"/>
-    <wire from="(830,170)" to="(890,170)"/>
-    <wire from="(890,140)" to="(890,170)"/>
-    <wire from="(890,170)" to="(950,170)"/>
   </circuit>
   <circuit name="Rom16x8">
     <a name="appearance" val="logisim_evolution"/>
