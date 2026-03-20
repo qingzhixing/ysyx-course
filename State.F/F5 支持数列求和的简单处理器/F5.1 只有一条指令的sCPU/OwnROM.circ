@@ -42,9 +42,7 @@
     <tool lib="8" name="Wiring Tool"/>
     <tool lib="8" name="Text Tool"/>
     <sep/>
-    <tool lib="0" name="Pin">
-      <a name="facing" val="north"/>
-    </tool>
+    <tool lib="0" name="Pin"/>
     <tool lib="0" name="Pin">
       <a name="facing" val="west"/>
       <a name="type" val="output"/>
@@ -350,5 +348,168 @@
     <wire from="(990,790)" to="(1000,790)"/>
     <wire from="(990,800)" to="(990,850)"/>
     <wire from="(990,850)" to="(1010,850)"/>
+  </circuit>
+  <circuit name="RAM2x8">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="RAM2x8"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="4" stroke="none" width="10" x="50" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">D</text>
+      <rect height="3" stroke="none" width="10" x="50" y="79"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">addr_0</text>
+      <rect height="3" stroke="none" width="10" x="50" y="99"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">addr_1</text>
+      <rect height="3" stroke="none" width="10" x="50" y="119"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="124">enable</text>
+      <rect height="3" stroke="none" width="10" x="50" y="139"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="144">reset</text>
+      <rect height="3" stroke="none" width="10" x="50" y="159"/>
+      <polyline fill="none" points="61,156 68,160 61,164" stroke="#000000" stroke-width="2"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="73" y="164">clock</text>
+      <rect height="4" stroke="none" width="10" x="260" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="64">Q</text>
+      <rect height="20" stroke="none" width="200" x="60" y="170"/>
+      <rect fill="none" height="140" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="184">RAM2x8</text>
+      <circ-anchor facing="east" x="270" y="60"/>
+      <circ-port dir="in" pin="400,110" x="50" y="60"/>
+      <circ-port dir="in" pin="400,150" x="50" y="80"/>
+      <circ-port dir="in" pin="400,190" x="50" y="100"/>
+      <circ-port dir="in" pin="400,230" x="50" y="120"/>
+      <circ-port dir="in" pin="400,270" x="50" y="140"/>
+      <circ-port dir="in" pin="400,310" x="50" y="160"/>
+      <circ-port dir="out" pin="790,310" x="270" y="60"/>
+    </appear>
+    <comp lib="0" loc="(400,110)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="D"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(400,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="addr_0"/>
+    </comp>
+    <comp lib="0" loc="(400,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="addr_1"/>
+    </comp>
+    <comp lib="0" loc="(400,230)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="enable"/>
+    </comp>
+    <comp lib="0" loc="(400,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(400,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(420,150)" name="Tunnel">
+      <a name="label" val="S_0"/>
+    </comp>
+    <comp lib="0" loc="(420,190)" name="Tunnel">
+      <a name="label" val="S_1"/>
+    </comp>
+    <comp lib="0" loc="(700,220)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="S_0"/>
+    </comp>
+    <comp lib="0" loc="(700,450)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="S_0"/>
+    </comp>
+    <comp lib="0" loc="(750,330)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="S_1"/>
+    </comp>
+    <comp lib="0" loc="(790,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Q"/>
+      <a name="type" val="output"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="2" loc="(720,200)" name="Demultiplexer">
+      <a name="facing" val="west"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="2" loc="(720,430)" name="Demultiplexer">
+      <a name="facing" val="west"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="2" loc="(770,310)" name="Demultiplexer">
+      <a name="facing" val="west"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="4" loc="(580,110)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(580,220)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(580,340)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(580,450)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(400,110)" to="(540,110)"/>
+    <wire from="(400,150)" to="(420,150)"/>
+    <wire from="(400,190)" to="(420,190)"/>
+    <wire from="(400,230)" to="(570,230)"/>
+    <wire from="(400,270)" to="(560,270)"/>
+    <wire from="(400,310)" to="(550,310)"/>
+    <wire from="(540,110)" to="(540,140)"/>
+    <wire from="(540,140)" to="(540,250)"/>
+    <wire from="(540,140)" to="(580,140)"/>
+    <wire from="(540,250)" to="(540,370)"/>
+    <wire from="(540,250)" to="(580,250)"/>
+    <wire from="(540,370)" to="(540,480)"/>
+    <wire from="(540,370)" to="(580,370)"/>
+    <wire from="(540,480)" to="(580,480)"/>
+    <wire from="(550,180)" to="(550,290)"/>
+    <wire from="(550,180)" to="(580,180)"/>
+    <wire from="(550,290)" to="(550,310)"/>
+    <wire from="(550,290)" to="(580,290)"/>
+    <wire from="(550,310)" to="(550,410)"/>
+    <wire from="(550,410)" to="(550,520)"/>
+    <wire from="(550,410)" to="(580,410)"/>
+    <wire from="(550,520)" to="(580,520)"/>
+    <wire from="(560,210)" to="(560,270)"/>
+    <wire from="(560,210)" to="(610,210)"/>
+    <wire from="(560,270)" to="(560,320)"/>
+    <wire from="(560,320)" to="(560,440)"/>
+    <wire from="(560,320)" to="(610,320)"/>
+    <wire from="(560,440)" to="(560,550)"/>
+    <wire from="(560,440)" to="(610,440)"/>
+    <wire from="(560,550)" to="(610,550)"/>
+    <wire from="(570,160)" to="(570,230)"/>
+    <wire from="(570,160)" to="(580,160)"/>
+    <wire from="(570,230)" to="(570,270)"/>
+    <wire from="(570,270)" to="(570,390)"/>
+    <wire from="(570,270)" to="(580,270)"/>
+    <wire from="(570,390)" to="(570,500)"/>
+    <wire from="(570,390)" to="(580,390)"/>
+    <wire from="(570,500)" to="(580,500)"/>
+    <wire from="(610,200)" to="(610,210)"/>
+    <wire from="(610,310)" to="(610,320)"/>
+    <wire from="(610,430)" to="(610,440)"/>
+    <wire from="(610,540)" to="(610,550)"/>
+    <wire from="(640,140)" to="(640,190)"/>
+    <wire from="(640,190)" to="(690,190)"/>
+    <wire from="(640,210)" to="(640,250)"/>
+    <wire from="(640,210)" to="(690,210)"/>
+    <wire from="(640,370)" to="(640,420)"/>
+    <wire from="(640,420)" to="(690,420)"/>
+    <wire from="(640,440)" to="(640,480)"/>
+    <wire from="(640,440)" to="(690,440)"/>
+    <wire from="(720,200)" to="(720,300)"/>
+    <wire from="(720,300)" to="(740,300)"/>
+    <wire from="(720,320)" to="(720,430)"/>
+    <wire from="(720,320)" to="(740,320)"/>
+    <wire from="(770,310)" to="(790,310)"/>
   </circuit>
 </project>
