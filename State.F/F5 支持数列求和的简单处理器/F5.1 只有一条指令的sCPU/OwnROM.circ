@@ -73,6 +73,9 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="4" loc="(160,130)" name="RAM">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
   </circuit>
   <circuit name="Rom16x8">
     <a name="appearance" val="logisim_evolution"/>
