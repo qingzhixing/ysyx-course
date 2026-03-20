@@ -214,6 +214,10 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="clock"/>
     </comp>
+    <comp lib="0" loc="(260,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="reset"/>
+    </comp>
     <comp lib="0" loc="(790,210)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -225,14 +229,18 @@
     <comp loc="(780,210)" name="D_Latch"/>
     <wire from="(260,190)" to="(270,190)"/>
     <wire from="(260,230)" to="(270,230)"/>
+    <wire from="(260,310)" to="(310,310)"/>
     <wire from="(270,190)" to="(270,210)"/>
     <wire from="(270,210)" to="(310,210)"/>
     <wire from="(270,230)" to="(270,290)"/>
     <wire from="(270,230)" to="(280,230)"/>
     <wire from="(270,290)" to="(550,290)"/>
+    <wire from="(310,250)" to="(310,310)"/>
+    <wire from="(310,310)" to="(560,310)"/>
     <wire from="(530,210)" to="(560,210)"/>
     <wire from="(550,230)" to="(550,290)"/>
     <wire from="(550,230)" to="(560,230)"/>
+    <wire from="(560,250)" to="(560,310)"/>
     <wire from="(780,210)" to="(790,210)"/>
   </circuit>
 </project>
