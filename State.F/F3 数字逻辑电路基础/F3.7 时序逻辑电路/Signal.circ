@@ -494,4 +494,43 @@
     <wire from="(570,190)" to="(580,190)"/>
     <wire from="(580,110)" to="(580,190)"/>
   </circuit>
+  <circuit name="Array_Sum">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Array_Sum"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(140,80)" name="Ground"/>
+    <comp lib="0" loc="(70,130)" name="Clock">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="3" loc="(410,390)" name="Adder"/>
+    <comp lib="4" loc="(150,50)" name="Counter">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(220,370)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="5" loc="(50,70)" name="Button"/>
+    <wire from="(120,480)" to="(250,480)"/>
+    <wire from="(120,70)" to="(120,480)"/>
+    <wire from="(120,70)" to="(150,70)"/>
+    <wire from="(140,130)" to="(140,420)"/>
+    <wire from="(140,130)" to="(150,130)"/>
+    <wire from="(140,420)" to="(140,440)"/>
+    <wire from="(140,420)" to="(220,420)"/>
+    <wire from="(140,440)" to="(220,440)"/>
+    <wire from="(140,80)" to="(150,80)"/>
+    <wire from="(210,400)" to="(210,470)"/>
+    <wire from="(210,400)" to="(220,400)"/>
+    <wire from="(210,470)" to="(420,470)"/>
+    <wire from="(250,460)" to="(250,480)"/>
+    <wire from="(280,400)" to="(370,400)"/>
+    <wire from="(340,160)" to="(350,160)"/>
+    <wire from="(350,160)" to="(350,380)"/>
+    <wire from="(350,380)" to="(370,380)"/>
+    <wire from="(410,390)" to="(420,390)"/>
+    <wire from="(420,390)" to="(420,470)"/>
+    <wire from="(50,70)" to="(120,70)"/>
+    <wire from="(70,130)" to="(140,130)"/>
+  </circuit>
 </project>
