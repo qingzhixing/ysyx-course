@@ -45,7 +45,9 @@
       <a name="type" val="output"/>
     </tool>
     <sep/>
-    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="NOT Gate">
+      <a name="facing" val="north"/>
+    </tool>
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
     <tool lib="1" name="XOR Gate"/>
@@ -60,6 +62,22 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(200,160)" name="Clock">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="5" loc="(190,190)" name="DipSwitch">
+      <a name="number" val="1"/>
+    </comp>
+    <comp lib="5" loc="(480,140)" name="LED"/>
+    <comp loc="(440,140)" name="D_Flip_Flop"/>
+    <wire from="(200,160)" to="(220,160)"/>
+    <wire from="(200,180)" to="(200,190)"/>
+    <wire from="(200,180)" to="(220,180)"/>
+    <wire from="(220,100)" to="(220,140)"/>
+    <wire from="(220,100)" to="(450,100)"/>
+    <wire from="(440,140)" to="(480,140)"/>
+    <wire from="(440,160)" to="(450,160)"/>
+    <wire from="(450,100)" to="(450,160)"/>
   </circuit>
   <circuit name="SR_Latch">
     <a name="appearance" val="logisim_evolution"/>
@@ -224,6 +242,12 @@
       <a name="label" val="Q"/>
       <a name="type" val="output"/>
     </comp>
+    <comp lib="0" loc="(790,230)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Not_Q"/>
+      <a name="type" val="output"/>
+    </comp>
     <comp lib="1" loc="(310,230)" name="NOT Gate"/>
     <comp loc="(530,210)" name="D_Latch"/>
     <comp loc="(780,210)" name="D_Latch"/>
@@ -242,5 +266,6 @@
     <wire from="(550,230)" to="(560,230)"/>
     <wire from="(560,250)" to="(560,310)"/>
     <wire from="(780,210)" to="(790,210)"/>
+    <wire from="(780,230)" to="(790,230)"/>
   </circuit>
 </project>
