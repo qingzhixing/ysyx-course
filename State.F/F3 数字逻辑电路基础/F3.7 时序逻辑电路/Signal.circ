@@ -66,6 +66,24 @@
     <a name="circuit" val="SR_Latch"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="3" stroke="none" width="10" x="50" y="59"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">R</text>
+      <rect height="3" stroke="none" width="10" x="50" y="79"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">S</text>
+      <rect height="3" stroke="none" width="10" x="260" y="59"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="64">Q</text>
+      <rect height="3" stroke="none" width="10" x="260" y="79"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="84">Not_Q</text>
+      <rect height="20" stroke="none" width="200" x="60" y="90"/>
+      <rect fill="none" height="60" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="104">SR_Latch</text>
+      <circ-anchor facing="east" x="270" y="60"/>
+      <circ-port dir="in" pin="290,200" x="50" y="60"/>
+      <circ-port dir="in" pin="290,330" x="50" y="80"/>
+      <circ-port dir="out" pin="490,220" x="270" y="60"/>
+      <circ-port dir="out" pin="500,310" x="270" y="80"/>
+    </appear>
     <comp lib="0" loc="(290,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="R"/>
@@ -102,5 +120,85 @@
     <wire from="(460,220)" to="(490,220)"/>
     <wire from="(480,250)" to="(480,310)"/>
     <wire from="(480,310)" to="(500,310)"/>
+  </circuit>
+  <circuit name="D_Latch">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="D_Latch"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="3" stroke="none" width="10" x="50" y="59"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">D</text>
+      <rect height="3" stroke="none" width="10" x="50" y="79"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">WE</text>
+      <rect height="3" stroke="none" width="10" x="260" y="59"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="64">Q</text>
+      <rect height="3" stroke="none" width="10" x="260" y="79"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="84">Not_Q</text>
+      <rect height="20" stroke="none" width="200" x="60" y="90"/>
+      <rect fill="none" height="60" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="104">D_Latch</text>
+      <circ-anchor facing="east" x="270" y="60"/>
+      <circ-port dir="in" pin="130,150" x="50" y="60"/>
+      <circ-port dir="in" pin="230,220" x="50" y="80"/>
+      <circ-port dir="in" pin="330,220" x="50" y="90"/>
+      <circ-port dir="out" pin="800,160" x="270" y="60"/>
+      <circ-port dir="out" pin="800,200" x="270" y="80"/>
+    </appear>
+    <comp lib="0" loc="(130,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="D"/>
+    </comp>
+    <comp lib="0" loc="(230,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="WE"/>
+    </comp>
+    <comp lib="0" loc="(330,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(800,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(800,200)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Not_Q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(280,150)" name="NOT Gate"/>
+    <comp lib="1" loc="(330,170)" name="AND Gate"/>
+    <comp lib="1" loc="(330,270)" name="AND Gate"/>
+    <comp lib="1" loc="(400,250)" name="NOT Gate"/>
+    <comp lib="1" loc="(450,170)" name="OR Gate"/>
+    <comp lib="1" loc="(450,270)" name="AND Gate"/>
+    <comp loc="(770,170)" name="SR_Latch"/>
+    <wire from="(130,150)" to="(130,290)"/>
+    <wire from="(130,150)" to="(250,150)"/>
+    <wire from="(130,290)" to="(280,290)"/>
+    <wire from="(230,190)" to="(230,220)"/>
+    <wire from="(230,190)" to="(280,190)"/>
+    <wire from="(230,220)" to="(230,250)"/>
+    <wire from="(230,250)" to="(280,250)"/>
+    <wire from="(330,150)" to="(330,170)"/>
+    <wire from="(330,150)" to="(400,150)"/>
+    <wire from="(330,190)" to="(330,220)"/>
+    <wire from="(330,190)" to="(400,190)"/>
+    <wire from="(330,220)" to="(330,250)"/>
+    <wire from="(330,250)" to="(370,250)"/>
+    <wire from="(330,270)" to="(330,290)"/>
+    <wire from="(330,290)" to="(400,290)"/>
+    <wire from="(450,170)" to="(550,170)"/>
+    <wire from="(450,270)" to="(550,270)"/>
+    <wire from="(550,190)" to="(550,270)"/>
+    <wire from="(770,170)" to="(790,170)"/>
+    <wire from="(770,190)" to="(790,190)"/>
+    <wire from="(790,160)" to="(790,170)"/>
+    <wire from="(790,160)" to="(800,160)"/>
+    <wire from="(790,190)" to="(790,200)"/>
+    <wire from="(790,200)" to="(800,200)"/>
   </circuit>
 </project>
