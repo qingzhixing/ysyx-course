@@ -325,4 +325,116 @@
     <wire from="(810,210)" to="(870,210)"/>
     <wire from="(810,230)" to="(870,230)"/>
   </circuit>
+  <circuit name="Register_4bit">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Register_4bit"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <rect height="4" stroke="none" width="10" x="50" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">D</text>
+      <rect height="3" stroke="none" width="10" x="50" y="79"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">enable</text>
+      <rect height="3" stroke="none" width="10" x="50" y="99"/>
+      <polyline fill="none" points="61,96 68,100 61,104" stroke="#000000" stroke-width="2"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="73" y="104">clock</text>
+      <rect height="3" stroke="none" width="10" x="50" y="119"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="124">reset</text>
+      <rect height="4" stroke="none" width="10" x="260" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="64">Q</text>
+      <rect height="20" stroke="none" width="200" x="60" y="130"/>
+      <rect fill="none" height="100" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="144">Register_4bit</text>
+      <circ-anchor facing="east" x="270" y="60"/>
+      <circ-port dir="in" pin="170,210" x="50" y="80"/>
+      <circ-port dir="in" pin="170,250" x="50" y="100"/>
+      <circ-port dir="in" pin="170,290" x="50" y="120"/>
+      <circ-port dir="in" pin="200,170" x="50" y="60"/>
+      <circ-port dir="out" pin="740,170" x="270" y="60"/>
+    </appear>
+    <comp lib="0" loc="(170,210)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="enable"/>
+    </comp>
+    <comp lib="0" loc="(170,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(170,290)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(200,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="D"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(200,170)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(740,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Q"/>
+      <a name="type" val="output"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(740,170)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp loc="(600,130)" name="D_Flip_Flop"/>
+    <comp loc="(600,250)" name="D_Flip_Flop"/>
+    <comp loc="(600,370)" name="D_Flip_Flop"/>
+    <comp loc="(600,490)" name="D_Flip_Flop"/>
+    <wire from="(170,210)" to="(370,210)"/>
+    <wire from="(170,250)" to="(210,250)"/>
+    <wire from="(170,290)" to="(350,290)"/>
+    <wire from="(210,250)" to="(210,270)"/>
+    <wire from="(210,270)" to="(360,270)"/>
+    <wire from="(220,130)" to="(380,130)"/>
+    <wire from="(220,140)" to="(240,140)"/>
+    <wire from="(220,150)" to="(230,150)"/>
+    <wire from="(220,160)" to="(220,490)"/>
+    <wire from="(220,490)" to="(380,490)"/>
+    <wire from="(230,150)" to="(230,370)"/>
+    <wire from="(230,370)" to="(380,370)"/>
+    <wire from="(240,140)" to="(240,250)"/>
+    <wire from="(240,250)" to="(380,250)"/>
+    <wire from="(350,190)" to="(350,290)"/>
+    <wire from="(350,190)" to="(380,190)"/>
+    <wire from="(350,290)" to="(350,310)"/>
+    <wire from="(350,310)" to="(350,430)"/>
+    <wire from="(350,310)" to="(380,310)"/>
+    <wire from="(350,430)" to="(350,550)"/>
+    <wire from="(350,430)" to="(380,430)"/>
+    <wire from="(350,550)" to="(380,550)"/>
+    <wire from="(360,150)" to="(360,270)"/>
+    <wire from="(360,150)" to="(380,150)"/>
+    <wire from="(360,270)" to="(360,390)"/>
+    <wire from="(360,270)" to="(380,270)"/>
+    <wire from="(360,390)" to="(360,510)"/>
+    <wire from="(360,390)" to="(380,390)"/>
+    <wire from="(360,510)" to="(380,510)"/>
+    <wire from="(370,170)" to="(370,210)"/>
+    <wire from="(370,170)" to="(380,170)"/>
+    <wire from="(370,210)" to="(370,290)"/>
+    <wire from="(370,290)" to="(370,410)"/>
+    <wire from="(370,290)" to="(380,290)"/>
+    <wire from="(370,410)" to="(370,530)"/>
+    <wire from="(370,410)" to="(380,410)"/>
+    <wire from="(370,530)" to="(380,530)"/>
+    <wire from="(600,130)" to="(720,130)"/>
+    <wire from="(600,250)" to="(700,250)"/>
+    <wire from="(600,370)" to="(710,370)"/>
+    <wire from="(600,490)" to="(720,490)"/>
+    <wire from="(700,140)" to="(700,250)"/>
+    <wire from="(700,140)" to="(720,140)"/>
+    <wire from="(710,150)" to="(710,370)"/>
+    <wire from="(710,150)" to="(720,150)"/>
+    <wire from="(720,160)" to="(720,490)"/>
+  </circuit>
 </project>
