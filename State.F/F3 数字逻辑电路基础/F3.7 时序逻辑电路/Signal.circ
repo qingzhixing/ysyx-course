@@ -60,6 +60,15 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(220,200)" name="Power"/>
+    <comp lib="5" loc="(500,180)" name="LED"/>
+    <comp loc="(470,180)" name="D_Latch"/>
+    <wire from="(220,200)" to="(250,200)"/>
+    <wire from="(250,150)" to="(250,180)"/>
+    <wire from="(250,150)" to="(480,150)"/>
+    <wire from="(470,180)" to="(500,180)"/>
+    <wire from="(470,200)" to="(480,200)"/>
+    <wire from="(480,150)" to="(480,200)"/>
   </circuit>
   <circuit name="SR_Latch">
     <a name="appearance" val="logisim_evolution"/>
