@@ -86,10 +86,8 @@
       <a name="label" val="Not_Q"/>
       <a name="type" val="output"/>
     </comp>
-    <comp lib="1" loc="(410,220)" name="OR Gate"/>
-    <comp lib="1" loc="(410,310)" name="OR Gate"/>
-    <comp lib="1" loc="(440,220)" name="NOT Gate"/>
-    <comp lib="1" loc="(440,310)" name="NOT Gate"/>
+    <comp lib="1" loc="(420,220)" name="NOR Gate"/>
+    <comp lib="1" loc="(420,310)" name="NOR Gate"/>
     <wire from="(290,200)" to="(360,200)"/>
     <wire from="(290,330)" to="(360,330)"/>
     <wire from="(350,240)" to="(350,250)"/>
@@ -98,8 +96,8 @@
     <wire from="(350,280)" to="(350,290)"/>
     <wire from="(350,280)" to="(460,280)"/>
     <wire from="(350,290)" to="(360,290)"/>
-    <wire from="(440,220)" to="(460,220)"/>
-    <wire from="(440,310)" to="(480,310)"/>
+    <wire from="(420,220)" to="(460,220)"/>
+    <wire from="(420,310)" to="(480,310)"/>
     <wire from="(460,220)" to="(460,280)"/>
     <wire from="(460,220)" to="(490,220)"/>
     <wire from="(480,250)" to="(480,310)"/>
