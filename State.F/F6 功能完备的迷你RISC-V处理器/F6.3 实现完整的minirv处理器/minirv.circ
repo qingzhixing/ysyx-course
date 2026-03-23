@@ -15,6 +15,10 @@
     <tool name="Power">
       <a name="facing" val="south"/>
     </tool>
+    <tool name="Bit Extender">
+      <a name="in_width" val="5"/>
+      <a name="out_width" val="4"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
@@ -121,13 +125,17 @@
       <a name="label" val="rs2_selector"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(1300,730)" name="Tunnel">
+    <comp lib="0" loc="(1350,720)" name="Bit Extender">
+      <a name="in_width" val="5"/>
+      <a name="out_width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1410,680)" name="Tunnel">
       <a name="label" val="opcode"/>
       <a name="width" val="7"/>
     </comp>
-    <comp lib="0" loc="(1300,770)" name="Tunnel">
+    <comp lib="0" loc="(1410,720)" name="Tunnel">
       <a name="label" val="rd_selector"/>
-      <a name="width" val="5"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(150,140)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -348,11 +356,12 @@
     <wire from="(1240,220)" to="(1270,220)"/>
     <wire from="(1240,420)" to="(1270,420)"/>
     <wire from="(1240,830)" to="(1250,830)"/>
-    <wire from="(1270,730)" to="(1270,780)"/>
-    <wire from="(1270,730)" to="(1300,730)"/>
+    <wire from="(1270,680)" to="(1270,780)"/>
+    <wire from="(1270,680)" to="(1410,680)"/>
     <wire from="(1270,790)" to="(1280,790)"/>
-    <wire from="(1280,770)" to="(1280,790)"/>
-    <wire from="(1280,770)" to="(1300,770)"/>
+    <wire from="(1280,720)" to="(1280,790)"/>
+    <wire from="(1280,720)" to="(1310,720)"/>
+    <wire from="(1350,720)" to="(1410,720)"/>
     <wire from="(150,140)" to="(330,140)"/>
     <wire from="(160,60)" to="(360,60)"/>
     <wire from="(160,630)" to="(200,630)"/>
