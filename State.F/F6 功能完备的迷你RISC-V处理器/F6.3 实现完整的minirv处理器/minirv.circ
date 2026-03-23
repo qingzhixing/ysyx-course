@@ -555,6 +555,11 @@
       <a name="label" val="PC_data"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="0" loc="(1880,2020)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RAM_data"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(1910,1740)" name="Probe">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
@@ -576,6 +581,13 @@
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(1930,1610)" name="Tunnel">
+      <a name="label" val="write_data"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(1930,2060)" name="Tunnel">
+      <a name="label" val="is_lw"/>
+    </comp>
+    <comp lib="0" loc="(1940,2020)" name="Tunnel">
       <a name="label" val="write_data"/>
       <a name="width" val="32"/>
     </comp>
@@ -1006,6 +1018,9 @@
       <a name="width" val="32"/>
     </comp>
     <comp lib="1" loc="(1900,1610)" name="Controlled Buffer">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="1" loc="(1920,2020)" name="Controlled Buffer">
       <a name="width" val="32"/>
     </comp>
     <comp lib="1" loc="(1970,1350)" name="AND Gate">
@@ -1501,6 +1516,7 @@
     <wire from="(1870,1190)" to="(1930,1190)"/>
     <wire from="(1870,1370)" to="(1920,1370)"/>
     <wire from="(1870,1770)" to="(1910,1770)"/>
+    <wire from="(1880,2020)" to="(1900,2020)"/>
     <wire from="(1890,1620)" to="(1890,1650)"/>
     <wire from="(1890,1650)" to="(1920,1650)"/>
     <wire from="(190,1210)" to="(200,1210)"/>
@@ -1523,6 +1539,9 @@
     <wire from="(1900,1930)" to="(1960,1930)"/>
     <wire from="(1910,1740)" to="(1910,1770)"/>
     <wire from="(1910,1770)" to="(1960,1770)"/>
+    <wire from="(1910,2030)" to="(1910,2060)"/>
+    <wire from="(1910,2060)" to="(1930,2060)"/>
+    <wire from="(1920,2020)" to="(1940,2020)"/>
     <wire from="(1930,1160)" to="(1930,1190)"/>
     <wire from="(1930,1190)" to="(2010,1190)"/>
     <wire from="(1970,1350)" to="(1980,1350)"/>
