@@ -130,6 +130,9 @@
       <a name="facing" val="east"/>
       <a name="label" val="reset"/>
     </comp>
+    <comp lib="0" loc="(1200,80)" name="Tunnel">
+      <a name="label" val="reset"/>
+    </comp>
     <comp lib="0" loc="(1240,1150)" name="Tunnel">
       <a name="label" val="rs1_data"/>
       <a name="width" val="32"/>
@@ -221,9 +224,6 @@
       <a name="facing" val="east"/>
       <a name="label" val="funct3"/>
       <a name="width" val="3"/>
-    </comp>
-    <comp lib="0" loc="(230,1580)" name="Tunnel">
-      <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(240,1970)" name="Constant">
       <a name="value" val="0x13"/>
@@ -538,7 +538,7 @@
       <a name="label" val="x15_a5"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="5" loc="(180,1580)" name="Button">
+    <comp lib="5" loc="(1150,80)" name="Button">
       <a name="label" val="reset_button"/>
     </comp>
     <comp lib="8" loc="(1009,1865)" name="Text">
@@ -614,6 +614,7 @@
     <wire from="(1140,1420)" to="(1170,1420)"/>
     <wire from="(1140,1870)" to="(1140,1910)"/>
     <wire from="(1140,1910)" to="(1180,1910)"/>
+    <wire from="(1150,80)" to="(1200,80)"/>
     <wire from="(1180,1760)" to="(1180,1790)"/>
     <wire from="(1180,1790)" to="(1190,1790)"/>
     <wire from="(1190,1230)" to="(1190,1250)"/>
@@ -645,7 +646,6 @@
     <wire from="(170,190)" to="(180,190)"/>
     <wire from="(170,40)" to="(170,100)"/>
     <wire from="(180,1030)" to="(290,1030)"/>
-    <wire from="(180,1580)" to="(230,1580)"/>
     <wire from="(180,970)" to="(180,1030)"/>
     <wire from="(190,1210)" to="(200,1210)"/>
     <wire from="(190,1220)" to="(220,1220)"/>
