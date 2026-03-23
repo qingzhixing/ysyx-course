@@ -65,6 +65,46 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="2048000.0"/>
+    <comp lib="0" loc="(1240,830)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RAM_data"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(1250,830)" name="Splitter">
+      <a name="bit1" val="0"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="2"/>
+      <a name="bit13" val="2"/>
+      <a name="bit14" val="2"/>
+      <a name="bit15" val="3"/>
+      <a name="bit16" val="3"/>
+      <a name="bit17" val="3"/>
+      <a name="bit18" val="3"/>
+      <a name="bit19" val="3"/>
+      <a name="bit2" val="0"/>
+      <a name="bit20" val="4"/>
+      <a name="bit21" val="4"/>
+      <a name="bit22" val="4"/>
+      <a name="bit23" val="4"/>
+      <a name="bit24" val="4"/>
+      <a name="bit25" val="4"/>
+      <a name="bit26" val="4"/>
+      <a name="bit27" val="4"/>
+      <a name="bit28" val="4"/>
+      <a name="bit29" val="4"/>
+      <a name="bit3" val="0"/>
+      <a name="bit30" val="4"/>
+      <a name="bit31" val="4"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="1"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="32"/>
+    </comp>
     <comp lib="0" loc="(1270,220)" name="Tunnel">
       <a name="label" val="rs1_data"/>
       <a name="width" val="32"/>
@@ -80,6 +120,14 @@
     <comp lib="0" loc="(1270,520)" name="Tunnel">
       <a name="label" val="rs2_selector"/>
       <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1300,730)" name="Tunnel">
+      <a name="label" val="opcode"/>
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(1300,770)" name="Tunnel">
+      <a name="label" val="rd_selector"/>
+      <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(150,140)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -299,6 +347,12 @@
     <wire from="(1220,520)" to="(1270,520)"/>
     <wire from="(1240,220)" to="(1270,220)"/>
     <wire from="(1240,420)" to="(1270,420)"/>
+    <wire from="(1240,830)" to="(1250,830)"/>
+    <wire from="(1270,730)" to="(1270,780)"/>
+    <wire from="(1270,730)" to="(1300,730)"/>
+    <wire from="(1270,790)" to="(1280,790)"/>
+    <wire from="(1280,770)" to="(1280,790)"/>
+    <wire from="(1280,770)" to="(1300,770)"/>
     <wire from="(150,140)" to="(330,140)"/>
     <wire from="(160,60)" to="(360,60)"/>
     <wire from="(160,630)" to="(200,630)"/>
