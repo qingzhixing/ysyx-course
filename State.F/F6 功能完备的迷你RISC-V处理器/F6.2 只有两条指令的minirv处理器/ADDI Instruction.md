@@ -1,6 +1,6 @@
 `addi` 指令的编码和功能描述如下：
 
-![ADDI Instruction](image/RTFM-2/ADDI_Instruction.png)
+![ADDI Instruction](image/ADDI_Instruction.png)
 
 ### 编码
 
