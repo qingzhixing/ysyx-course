@@ -1265,7 +1265,7 @@ Disassembly of section .text:
     1224:	ff410113          	addi	sp,sp,-12
     1228:	00049537          	lui	a0,0x49
     122c:	60050513          	addi	a0,a0,1536 # 49600 <mainargs>
-    1230:	00112423          	sw	ra,8(sp) # FIX:Problem Here,x8 : Undefined
+    1230:	00112423          	sw	ra,8(sp)
     1234:	0b800093          	addi	ra,zero,184
     1238:	000080e7          	jalr	ra,0(ra)
     123c:	000010b7          	lui	ra,0x1
