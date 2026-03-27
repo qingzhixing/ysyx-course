@@ -4,27 +4,55 @@ module top_module(
     input reset,    // Synchronous reset
     output done
 ); 
-	parameter [4:0] IDLE_STATE  = 5'b0000_1;
-	parameter [4:0] START_STATE = 5'b0001_0;
-	parameter [4:0] DATA_STATE  = 5'b0010_0;
-	parameter [4:0] END_STATE   = 5'b0100_0;
-	parameter [4:0] ERROR_STATE = 5'b1000_0;
+	parameter [3:0] IDLE_STATE  = 4'd0;
+	parameter [3:0] START_STATE = 4'd1;
+	parameter [3:0] DATA_STATE  = 4'd2;
+	parameter [3:0] END_STATE   = 4'd3;
+	parameter [3:0] ERROR_STATE = 4'd4;
 
-	reg [4:0] state, next_state;
+	reg [3:0] state, next_state;
 
 	reg [4:0] data_cnt;
 
 	// State Transition
-	assign next_state[0] = in && (state[0] || state[3] || state[4]);			// IDLE
-	assign next_state[1] = (!in) && (state[0] || state[3]);						// START
-	assign next_state[2] = state[1] || (state[2] && (data_cnt < 8));			// DATA
-	assign next_state[3] = in && state[2] && (data_cnt >= 8);					// END
-	assign next_state[4] = (!in) && ((state[2] && (data_cnt >=8)) || state[4])	// ERROR
+	always @(*) begin
+		case (state)
+			IDLE_STATE: begin
+				if(in) next_state = IDLE_STATE;
+				else next_state = START_STATE;
+			end
+			START_STATE: begin
+				next_state = DATA_STATE;
+			end
+			DATA_STATE: begin
+				if(data_cnt < 8) next_state = DATA_STATE;
+				else if (in) next_state = END_STATE;
+				else next_state = ERROR_STATE;
+			end
+			END_STATE: begin
+				if (in) next_state = IDLE_STATE;
+				else next_state = START_STATE;
+			end
+			ERROR_STATE: begin
+				if (in) next_state = IDLE_STATE;
+				else next_state = ERROR_STATE;
+			end
+			default: next_state = IDLE_STATE;
+		endcase
+	end
 
 	// State Flip-Flop
 	always @(posedge clk) begin
 		if(reset) begin
-			
+			state <= IDLE_STATE;
+			data_cnt <= 0;
+		end else begin
+			state <= next_state;
+			if(next_state == DATA_STATE) data_cnt <= data_cnt + 5'b1;
+			else data_cnt <= 0;
 		end
 	end	
+
+	// Output
+	assign done = (state == END_STATE);
 endmodule
